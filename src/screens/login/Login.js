@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {Text, TextInput, View} from 'react-native';
 import Container from '../../components/common/container/Container';
-import Input from '../../components/input/Input';
+import CustomButton from '../../components/common/custombutton/CustomButton';
+import Input from '../../components/common/input/Input';
 
 const Login = () => {
   const [value, onChangeText] = useState('Useless Placeholder');
@@ -21,6 +22,10 @@ const Login = () => {
         iconPosition="right"
         // error="This field is required"
       />
+      <CustomButton secondary title="Submit" loading={true} disabled={true} />
+      <CustomButton secondary title="Click me" loading={true} />
+      <CustomButton primary title="Submit" loading={true} disabled={true} />
+      <CustomButton danger title="Submit" />
     </Container>
   );
 };
